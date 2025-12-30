@@ -8,9 +8,9 @@ $$ \vec{F}_{eff} = -m\vec{a}$$
 Entonces, al plantear la segunda ley de Newton, obtenemos: 
 $$ 
 \begin{aligned}
-	\sum{\vec{F}} &=m \vec{a} \\
-	\sum{\vec{F}} - m \vec{a} &= 0 \\
-	\sum{\vec{F}} + \vec{F}_{eff} &= 0
+\sum{\vec{F}} &=m \vec{a} \\
+\sum{\vec{F}} - m \vec{a} &= 0 \\
+\sum{\vec{F}} + \vec{F}_{eff} &= 0
 \end{aligned}
 $$
 Esta última expresión es la previamente mencionada "Ecuación de Equilibrio **Dinámico**". Cabe aclarar que este principio también aplica para las ecuaciones de **pares de fuerzas**.
