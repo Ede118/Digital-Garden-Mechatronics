@@ -8,4 +8,4 @@ dg-home: true
 
 Este es mi jardín digital.
 
-Prueba 123.
+Acá hago la prueba.
