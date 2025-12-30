@@ -21,9 +21,9 @@ Esta última expresión es la previamente mencionada "Ecuación de Equilibrio **
 Analizando todas las fuerzas del sistema en estado **estático**: 
 $$
 \begin{aligned}
-	P_1 &= - kx_1 = -k(a\theta_0) \\
-	P_2 &= - kx_2 = -k(b\theta_0) \\
-	W &= mg
+P_1 &= - kx_1 = -k(a\theta_0) \\
+P_2 &= - kx_2 = -k(b\theta_0) \\
+W &= mg
 \end{aligned} $$
 En el equilibrio, tomando como positivo el sentido anti horario: 
 $$
