@@ -1,0 +1,36 @@
+
+
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  width: 100%;
+  font-family: var(--headerFont);
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--darkgray);
+  font-weight: 600;
+  text-transform: capitalize;
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+
+.nav-link:hover {
+  background-color: var(--lightgray);
+  color: var(--secondary);
+}
+
+/* Empujar lo que siga a la derecha del todo */
+.nav-right {
+  margin-left: auto; 
+}
+
+.nav-btn.donate {
+  background-color: var(--tertiary);
+  color: white !important;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  text-decoration: none;
+}

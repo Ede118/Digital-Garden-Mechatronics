@@ -8,46 +8,27 @@
   --bodyFont: "EB Garamond", serif;
 }
 
-/* Header de Ancho Completo (Estilo Web Profesional) */
+/* Romper la jaula: Header de ancho completo */
 .page > header {
   grid-area: header;
-  width: 100vw; /* Ocupar todo el ancho de la ventana */
-  max-width: 100vw;
-  margin-left: calc(-50vw + 50%); /* Truco CSS para centrar elementos full-width */
-  margin-right: calc(-50vw + 50%);
-  padding: 1rem 2rem; /* Espacio interno para que no pegue a los bordes */
+  /* La clave: Decirle que ocupe desde la columna 1 hasta la final (-1) */
+  grid-column: 1 / -1 !important; 
+  width: 100%;
+  max-width: 100% !important;
+  
+  /* Estética de barra de navegación */
+  background-color: var(--light);
+  border-bottom: 1px solid var(--lightgray);
+  padding: 1rem 2rem; /* Aire a los costados */
   box-sizing: border-box;
   
-  /* Flexbox para alinear: Logo izq - Menú centro - Search der */
+  /* Alinear contenido interno */
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  
-  border-bottom: 1px solid var(--lightgray); /* Línea sutil abajo */
-  background-color: var(--light); /* Asegurar fondo sólido */
+  justify-content: space-between;
 }
 
-.navbar {
-  display: flex;
-  gap: 2rem; /* Espacio entre enlaces */
-  font-family: var(--headerFont);
-  font-weight: 600;
-}
 
-.navbar a {
-  text-decoration: none;
-  color: var(--darkgray);
-  transition: color 0.2s;
-}
-
-.navbar a:hover {
-  color: var(--secondary);
-}
-
-body {
-  font-family: var(--bodyFont);
-  font-size: 1.1rem;;
-}
 
 
 
