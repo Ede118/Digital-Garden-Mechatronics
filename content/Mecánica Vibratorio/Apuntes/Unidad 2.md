@@ -1,3 +1,9 @@
+---
+Updated: 2025-12-30T02:50:00
+dg-publish:
+imageNameKey:
+title: "Unidad 2: Sistemas de 1 Grado de Libertad"
+---
 # Sistemas de 1 Grado de Libertad
 
 Para encontrar la solución del modelo matemático de la vibración de un sistema, tenemos 3 herramientas. Puntualmente, en un sistema de 1 grado de libertad, podemos encontrar la solución mediante el uso de:
