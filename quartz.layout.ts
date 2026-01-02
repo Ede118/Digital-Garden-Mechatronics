@@ -6,24 +6,6 @@ export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
   header: [
     Component.PageTitle(),
-    Component.Spacer(),
-    Component.Explorer({
-      title: "Archivos",
-      order: ["sort", "filter", "map",],
-      }
-    ),
-    Component.Spacer(),
-
-    Component.Flex({
-      components: [
-        {
-          Component: Component.Search(),
-          grow: true,
-        },
-        { Component: Component.Darkmode() },
-        { Component: Component.ReaderMode() },
-      ],
-    }),
   ],
   afterBody: [],
   footer: Component.Footer({
@@ -42,12 +24,12 @@ export const defaultContentPageLayout: PageLayout = {
     Component.ContentMeta(),
     Component.TagList(),
   ],
-  left: [],
-  right: [
+  left: [
     Component.DesktopOnly(Component.TableOfContents()),
     Component.Spacer(),
     Component.Graph(),
-
+  ],
+  right: [
   ]
 }
 
