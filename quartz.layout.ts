@@ -1,43 +1,53 @@
 import { PageLayout, SharedLayout } from "./quartz/cfg"
 import * as Component from "./quartz/components"
 
-// quartz.layout.ts
-
-// 1. HEADER (Lo que se ve arriba de todo)
+// components shared across all pages
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
-  header: [
-    Component.PageTitle(), // Título Principal (Logo)
-    Component.Navbar(),    // Nuestro menú manual
-    Component.Spacer(),    // Empuja lo siguiente a la derecha
-    Component.Search(),
-    Component.Darkmode(),
-  ],
+  header: [],
   afterBody: [],
-  footer: Component.Footer({ links: {} }),
+  footer: Component.Footer(),
 }
 
-// 2. CUERPO DE LA PÁGINA (Lo que va debajo del header)
+// components for pages that display a single page (e.g. a single note)
 export const defaultContentPageLayout: PageLayout = {
   beforeBody: [
-    Component.Breadcrumbs(),
-    Component.ArticleTitle(), // Título de la NOTA (ej: Unidad 1), NO del sitio
+    Component.ConditionalRender({
+      component: Component.Breadcrumbs(),
+      condition: (page) => page.fileData.slug !== "index",
+    }),
+    Component.ArticleTitle(),
     Component.ContentMeta(),
     Component.TagList(),
   ],
-  
-  // ¡¡IMPORTANTE!! Dejar 'left' VACÍO para borrar la barra lateral izquierda
-  left: [], 
-
+  left: [
+    Component.PageTitle(),
+    Component.Spacer(),
+    Component.Search(),
+    Component.Explorer(),
+  ],
   right: [
     Component.DesktopOnly(Component.TableOfContents()),
-    Component.Graph(),
+    Component.Backlinks(),
   ],
 }
 
-// 3. (Opcional) Hacer lo mismo con defaultListPageLayout si quieres que el Home se vea igual
+// components for pages that display lists of pages  (e.g. tags or folders)
 export const defaultListPageLayout: PageLayout = {
-    beforeBody: [Component.Breadcrumbs(), Component.ArticleTitle(), Component.ContentMeta()],
-    left: [], // Vaciar aquí también
-    right: [],
+  beforeBody: [Component.Breadcrumbs(), Component.ArticleTitle(), Component.ContentMeta()],
+  left: [
+    Component.PageTitle(),
+    Component.MobileOnly(Component.Spacer()),
+    Component.Flex({
+      components: [
+        {
+          Component: Component.Search(),
+          grow: true,
+        },
+        { Component: Component.Darkmode() },
+      ],
+    }),
+    Component.Explorer(),
+  ],
+  right: [],
 }
