@@ -6,14 +6,16 @@ export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
   header: [
     Component.PageTitle(),
+
     Component.Spacer(),
     Component.Explorer({
       title: "Archivos",
       order: ["sort", "filter", "map",],
       }
     ),
+    Component.Navbar(),
     Component.Spacer(),
-
+    
     Component.Flex({
       components: [
         {

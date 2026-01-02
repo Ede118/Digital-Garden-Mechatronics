@@ -24,6 +24,10 @@ import Comments from "./Comments"
 import Flex from "./Flex"
 import ConditionalRender from "./ConditionalRender"
 
+// Self made components
+import Navbar from "./Navbar"
+
+
 export {
   ArticleTitle,
   Content,
@@ -43,6 +47,7 @@ export {
   Search,
   Footer,
   DesktopOnly,
+  Navbar,
   MobileOnly,
   RecentNotes,
   NotFound,
