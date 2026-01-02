@@ -57,41 +57,43 @@ Definimos como *Desplazamiento Virtual* al desplazamiento infinitesimal, arbitra
 
 Definimos como *Trabajo Virtual* al trabajo realizado por todas las fuerzas del sistema en un desplazamiento virtual.
 
-##### Ejemplo
+> [!EXAMPLE]
+> ![[Unidad 2 Img 2.png]]
+> Primero, buscamos todas las fuerzas del sistema, en orden: Fuerza Inercial, Fuerza Elástica, Fuerza Disipativa y Fuerza Externa: 
+> $$
+> \begin{aligned}
+> M_{\text{inercial}} &= -\frac{ml^2}{3} \ddot{\theta} \\
+> F_{\text{elástica}} &= -k \frac{l}{2}\theta \\
+> F_{\text{disipativa}} &= - cl\dot{\theta} \\
+> F_{\text{externa}} &= p_0 f(t)
+> \end{aligned}
+> $$
+> 
+> Sabiendo que estamos trabajando con una coordenada generalizada de tipo angular, y aplicando los trabajos virtuales en un desplazamiento virtual \delta x y sumando los trabajos provocados por los MOMENTOS sería:
+> 
+> $$
+> \begin{aligned}
+> \delta W_{\text{inercial}} &= -(\frac{ml^2}{3} \ddot{\theta}) \; \delta \theta \\
+> \delta W_{\text{elástica}} &= - (k \frac{l}{2}\theta) \frac{l}{2} \; \delta \theta \\
+> \delta W_{\text{disipativa}} &= - (cl\dot{\theta}) \; l \; \delta \theta \\
+> \delta W_{\text{externa}} &= \int_0^l{(p_0 f(t) dx) \; x \; \delta \theta} = \frac{l^2}{2} p_0 f(t) \; \delta \theta
+> \end{aligned}
+> $$
+> 
+> La suma de todos estos trabajos debería ser cero: 
+> $$ 
+> W_{\text{virtual}} = W_{\text{inercial}} + W_{\text{elástica}} + W_{\text{disipativa}} + W_{\text{externa}} = 0
+> $$
+> Reemplazando, podemos llegar a: 
+> 
+> $$[\frac{ml^2}{3} \ddot{\theta} + (k \frac{l}{2}\theta) \frac{l}{2} + (cl\dot{\theta}) \; l] \; \delta \theta = [\frac{l^2}{2} p_0 f(t)] \; \delta \theta$$
+> 
+> Ahora, podemos "deshacernos" de los desplazamientos virtuales, y ordenando la ecuación llegamos a: 
+> 
+> $$ \frac{ml^2}{3} \ddot{\theta} + c l^2 \; \dot{\theta} + k \frac{l^2}{4}\theta = \frac{l^2}{2} p_0 f(t) \; $$
+> 
+> Y finalmente, llegamos a la ecuación que describe el sistema.
 
-![[Unidad 2 Img 2.png]]
-Primero, buscamos todas las fuerzas del sistema, en orden: Fuerza Inercial, Fuerza Elástica, Fuerza Disipativa y Fuerza Externa: 
-$$
-\begin{aligned}
-M_{\text{inercial}} &= -\frac{ml^2}{3} \ddot{\theta} \\
-F_{\text{elástica}} &= -k \frac{l}{2}\theta \\
-F_{\text{disipativa}} &= - cl\dot{\theta} \\
-F_{\text{externa}} &= p_0 f(t)
-\end{aligned}
-$$
-Sabiendo que estamos trabajando con una coordenada generalizada de tipo angular, y aplicando los trabajos virtuales en un desplazamiento virtual $\delta x$ y **sumando los trabajos provocados por los MOMENTOS** sería:
-
-$$\begin{aligned}
-\delta W_{\text{inercial}} &= -(\frac{ml^2}{3} \ddot{\theta}) \; \delta \theta \\
-\delta W_{\text{elástica}} &= - (k \frac{l}{2}\theta) \frac{l}{2} \; \delta \theta \\
-\delta W_{\text{disipativa}} &= - (cl\dot{\theta}) \; l \; \delta \theta \\
-\delta W_{\text{externa}} &= \int_0^l{(p_0 f(t) dx) \; x \; \delta \theta} = \frac{l^2}{2} p_0 f(t) \; \delta \theta
-\end{aligned}
-$$
-
-La suma de todos estos trabajos debería ser cero: 
-$$ 
-W_{\text{virtual}} = W_{\text{inercial}} + W_{\text{elástica}} + W_{\text{disipativa}} + W_{\text{externa}} = 0
-$$
-Reemplazando, podemos llegar a: 
-$$
-[\frac{ml^2}{3} \ddot{\theta} + (k \frac{l}{2}\theta) \frac{l}{2} + (cl\dot{\theta}) \; l] \; \delta \theta = [\frac{l^2}{2} p_0 f(t)] \; \delta \theta
-$$
-Ahora, podemos "deshacernos" de los desplazamientos virtuales, y ordenando la ecuación llegamos a: 
-$$
-\frac{ml^2}{3} \ddot{\theta} + c l^2 \; \dot{\theta} + k \frac{l^2}{4}\theta = \frac{l^2}{2} p_0 f(t) \; 
-$$
-Y finalmente, llegamos a la ecuación que describe el sistema.
 ## 3. Principio de Hamilton
 ### Coordenadas Generalizadas
 
@@ -244,69 +246,65 @@ Recordando que:
 	$Q_k \text{: Fuerzas Externas al Sistema}$
 
 
-###### Ejemplo
-![[Pasted image 20251118123122.png]]
-
-En este ejemplo, se tiene el diagrama de cuerpo libre (el cuál es una parte considerable del problema en si). El primer paso es identificar los cuerpos en movimientos (masas), en este caso: la masa del carro $M$ y el eslabón abierto con vínculo a la caja en $O$ que llamamos masa del eslabón $m$.
-
-La masa $M$ cuenta únicamente con desplazamiento lineal en el eje horizontal, mientras que la masa $m$ realiza movimiento plano general: __tiene tanto rotación como desplazamiento lineal__. Eso es importante tenerlo en cuenta.
-
-Los elementos que guardan energía (potenciales) son: los resortes $k_{1}, k_{2}$ y la masa del eslabón $m$ (que almacena energía potencial).
-
-Finalmente, los elementos disipativos son únicamente los amortiguadores viscosos $c_{1}, c_{2}$.
-
-Con esto armamos:
-
-$$
-\begin{align}
-T_{M}  & = \frac{1}{2} M \dot{x}^{2} \\
-V_{M}  & = \frac{1}{2} k_{1} x^{2} + \frac{1}{2} k_{2} x^{2}\\
-D_{M}  & = \frac{1}{2} c_{1} \dot{x}^{2} + \frac{1}{2} c_{2} \dot{x}^{2}
-\end{align}
-$$
-$$
-\begin{align}
-T_{m}  & = \frac{1}{2} m (\dot{x}_{C}^{2}+ \dot{y}_{C}^{2}) + \frac{1}{2} J_{C} \dot{\theta}^{2}\\
-V_{m}  & = \frac{1}{2} mgl (1-\cos \theta) \\
-D_{m}  & = 0
-\end{align}
-$$
-El sistema queda:
-$$
-\begin{align}
-T & = \frac{1}{2} M \dot{x}^{2} + \frac{1}{2} m (\dot{x}_{C}^{2}+ \dot{y}_{C}^{2}) + \frac{1}{2} J_{C} \dot{\theta}^{2} \\
-V & = \frac{1}{2} k_{1} x^{2} + \frac{1}{2} k_{2} x^{2} + \frac{1}{2} mgl (1-\cos \theta) \\
-D & = \frac{1}{2} c_{1} \dot{x}^{2} + \frac{1}{2} c_{2} \dot{x}^{2}
-\end{align}
-$$
-Recoordemos que los reeemplazos son $x_{C}=x+\frac{l}{2}\sin(\theta), \; y_{C}=\frac{l}{2}\cos (\theta)$. Por relaciones trigonométricas:
-$$
-\begin{align}
-\dot{x}_{C}^{2} + \dot{y}_{C}^{2}  & = \left( \frac{d}{dt} \left( x+\frac{l}{2} \sin (\theta) \right)  \right)^{2} +\left( \frac{d}{dt} \frac{l}{2} \cos (\theta)  \right)^{2}  \\
+>[!EXAMPLE]
+>  ![[Pasted image 20251118123122.png]]
+>En este ejemplo, se tiene el diagrama de cuerpo libre (el cuál es una parte considerable del problema en si). El primer paso es identificar los cuerpos en movimientos (masas), en este caso: la masa del carro $M$ y el eslabón abierto con vínculo a la caja en $O$ que llamamos masa del eslabón $m$.
+>
+>La masa $M$ cuenta únicamente con desplazamiento lineal en el eje horizontal, mientras que la masa $m$ realiza movimiento plano general: __tiene tanto rotación como desplazamiento lineal__. Eso es importante tenerlo en cuenta.
+>
+>Los elementos que guardan energía (potenciales) son: los resortes $k_{1}, k_{2}$ y la masa del eslabón $m$ (que almacena energía potencial).
+>
+>Finalmente, los elementos disipativos son únicamente los amortiguadores viscosos $c_{1}, c_{2}$.
+>
+>Con esto armamos:
+>$$
+>\begin{align}
+> T_{M}  & = \frac{1}{2} M \dot{x}^{2} \\
+> V_{M}  & = \frac{1}{2} k_{1} x^{2} + \frac{1}{2} k_{2} x^{2}\\
+> D_{M}  & = \frac{1}{2} c_{1} \dot{x}^{2} + \frac{1}{2} c_{2} \dot{x}^{2}
+> \end{align}
+> $$
+>$$
+>\begin{align} \\
+> T_{m}  & = \frac{1}{2} m (\dot{x}_{C}^{2}+ \dot{y}_{C}^{2}) + \frac{1}{2} J_{C} \dot{\theta}^{2}\\
+> V_{m}  & = \frac{1}{2} mgl (1-\cos \theta) \\
+> D_{m}  & = 0
+> \end{align}
+> $$
+>El sistema queda:
+>$$
+> \begin{align}
+> T & = \frac{1}{2} M \dot{x}^{2} + \frac{1}{2} m (\dot{x}_{C}^{2}+ \dot{y}_{C}^{2}) + \frac{1}{2} J_{C} \dot{\theta}^{2} \\
+> V & = \frac{1}{2} k_{1} x^{2} + \frac{1}{2} k_{2} x^{2} + \frac{1}{2} mgl (1-\cos \theta) \\
+> D & = \frac{1}{2} c_{1} \dot{x}^{2} + \frac{1}{2} c_{2} \dot{x}^{2}
+> \end{align}
+> $$
+>Recoordemos que los reeemplazos son $x_{C}=x+\frac{l}{2}\sin(\theta), \; y_{C}=\frac{l}{2}\cos (\theta)$. Por relaciones trigonométricas:
+>$$
+> \begin{align}
+> \dot{x}_{C}^{2} + \dot{y}_{C}^{2}  & = \left( \frac{d}{dt} \left( x+\frac{l}{2} \sin (\theta) \right)  \right)^{2} +\left( \frac{d}{dt} \frac{l}{2} \cos (\theta)  \right)^{2}  \\
  \\
- & = \frac{l^{2}}{4} \dot{\theta}^{2} (\cos^{2}(\theta) + \sin ^{2}(\theta)) + \dot{x} ^{2} + lx\cos(\theta)\\
- \\
- & = \frac{l^{2}}{4} \dot{\theta}^{2} + \dot{x}^{2} + lx\cos(\theta)
-\end{align}
-$$
-Y llegamos a:
-
-$$
-T = \frac{1}{2} (M+m) \dot{x}^{2} + \frac{1}{2} \left( \frac{ml^{2}}{3} \right) \dot{\theta}^{2} + \frac{1}{2} \big(ml \cos(\theta)\big) \dot{x} \dot{\theta}
-$$
-
-Reemplazando para cada coordenada generalizada en la expresión:
-$$
- \frac{d}{dt} \Big( \frac{\partial T}{\partial \dot{q_k}} \Big) - \frac{\partial T}{\partial q_k} + \frac{\partial V}{\partial{q_k}} +\frac{\partial D_v}{\partial \dot{q_k}} = Q_k
-$$
-Con esto, llegamos a:
-$$
-\begin{align}
-\big(M+m\big)\ddot{x} + \frac{ml}{2} \Big[\cos(\theta)\ddot{\theta} - \sin(\theta)\dot{\theta}^{2}\Big] + \big(c_{1}+c_{2}\big)\dot{x} + \big(k_{1}+k_{2}\big)\dot{x}  & = F(t)\\
- \\
-\frac{ml^{2}}{3}\ddot{\theta} + \frac{ml}{2} \Big[ \cos(\theta)\ddot{x} - \sin(\theta)\dot{\theta}\dot{x} \Big] + \frac{ml}{2} \dot{\theta}\dot{x} \sin (\theta) \frac{mgl}{2} \sin(\theta) & = M(t)
-\end{align}
-$$
+> & = \frac{l^{2}}{4} \dot{\theta}^{2} (\cos^{2}(\theta) + \sin ^{2}(\theta)) + \dot{x} ^{2} + lx\cos(\theta)\\
+> \\
+> & = \frac{l^{2}}{4} \dot{\theta}^{2} + \dot{x}^{2} + lx\cos(\theta)
+> \end{align}
+> $$
+>Y llegamos a:
+>$$
+> T = \frac{1}{2} (M+m) \dot{x}^{2} + \frac{1}{2} \left( \frac{ml^{2}}{3} \right) \dot{\theta}^{2} + \frac{1}{2} \big(ml \cos(\theta)\big) \dot{x} \dot{\theta}
+> $$
+>Reemplazando para cada coordenada generalizada en la expresión:
+>$$
+> \frac{d}{dt} \Big( \frac{\partial T}{\partial \dot{q_k}} \Big) - \frac{\partial T}{\partial q_k} + \frac{\partial V}{\partial{q_k}} +\frac{\partial D_v}{\partial \dot{q_k}} = Q_k
+> $$
+>Con esto, llegamos a:
+>$$
+> \begin{align}
+> \big(M+m\big)\ddot{x} + \frac{ml}{2} \Big[\cos(\theta)\ddot{\theta} - \sin(\theta)\dot{\theta}^{2}\Big] + \big(c_{1}+c_{2}\big)\dot{x} + \big(k_{1}+k_{2}\big)\dot{x}  & = F(t)\\
+> \\
+> \frac{ml^{2}}{3}\ddot{\theta} + \frac{ml}{2} \Big[ \cos(\theta)\ddot{x} - \sin(\theta)\dot{\theta}\dot{x} \Big] + \frac{ml}{2} \dot{\theta}\dot{x} \sin (\theta) \frac{mgl}{2} \sin(\theta) & = M(t)
+> \end{align}
+> $$
 
 > [!TIP]  __Cálculos auxiliares__
 > $$ T = \tfrac12 (M+m)\dot q_1^{\,2} + \frac{mℓ^{2}}{6}\dot q₂ ^{2} + \tfrac12 \big(mℓcos q₂\big)\dot q₁ \dot q₂ $$
