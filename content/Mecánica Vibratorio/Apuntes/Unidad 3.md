@@ -1,5 +1,7 @@
-# Respuestas en Vibraciones Libres
-
+---
+dg-publish:
+title: "Unidad 3: Respuestas en Vibraciones Libres"
+---
 En esta unidad vamos a analizar los sistemas en "Vibraciones Libres", esto es decir, sin fuerzas externas que puedan excitar (modificar) al sistema. Veremos:
 - Respuesta a vibraciones libres __no amortiguadas__
 - Respuesta a vibraciones libres __amortiguadas__

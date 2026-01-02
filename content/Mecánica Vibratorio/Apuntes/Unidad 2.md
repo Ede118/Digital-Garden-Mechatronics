@@ -1,6 +1,6 @@
 ---
 Updated: 2025-12-30T02:50:00
-dg-publish:
+dg-publish: true
 imageNameKey:
 title: "Unidad 2: Sistemas de 1 Grado de Libertad"
 ---
