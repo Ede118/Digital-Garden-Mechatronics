@@ -29,8 +29,6 @@ export const defaultContentPageLayout: PageLayout = {
     Component.Spacer(),
     Component.Graph(),
   ],
-  right: [
-  ]
 }
 
 // components for pages that display lists of pages  (e.g. tags or folders)
@@ -50,5 +48,4 @@ export const defaultListPageLayout: PageLayout = {
     }),
     Component.Explorer(),
   ],
-  right: [],
 }
