@@ -42,7 +42,7 @@ const config: QuartzConfig = {
 
         },
         darkMode: {
-          light: "#303446",       // Frappé Base
+          light: "#303445",       // Frappé Base
           lightgray: "#292c3c",
           gray: "#626880",
           darkgray: "#c6d0f5",
