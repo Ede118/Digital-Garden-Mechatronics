@@ -14,8 +14,7 @@ export default ((opts?: Options) => {
     return (
       <footer class={`${displayClass ?? ""}`}>
         <p>
-          Esta página esta basada en
-          <a href="https://quartz.jzhao.xyz/">Quartz</a> ©. Agradecemos a Jacky Zhao por su trabajo. 
+          Esta página esta basada en <a href="https://quartz.jzhao.xyz/">Quartz</a> ©. Agradecemos a Jacky Zhao por su trabajo. <br />
           Nos reservamos todos los derechos. {year} ©. <br />
           F.B.R.
         </p>
