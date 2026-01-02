@@ -9,6 +9,10 @@ h1 {
   color: #d7827e; /* Rosé */
   font-weight: 900 !important;
   letter-spacing: -0.05rem;
+  border-bottom: 2px solid var(--secondary); /* Línea sólida del color de tu tema */
+  padding-bottom: 0.3em; /* Espacio entre letra y línea */
+  margin-bottom: 1em;    /* Espacio debajo de la línea */
+  width: 100%;           /* Que ocupe todo el ancho */
 }
 
 /* H2: Peach/Naranja y Muy Fino (Weight 100) */
@@ -50,4 +54,70 @@ h6 {
 /* Ajuste de Fuente Serif para títulos */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Merriweather', serif;
+}
+
+/* --- CALLOUTS PERSONALIZADOS (Estilo AnuPpuccin) --- */
+
+/* Base para todos los Callouts */
+.callout {
+  border: 1px solid transparent !important; /* Quitamos el borde estándar */
+  border-radius: 8px !important;
+  padding: 1rem !important;
+  margin: 1rem 0;
+  /* La magia: usamos el color del callout con transparencia para el fondo */
+  background-color: color-mix(in srgb, var(--color) 10%, var(--light)) !important; 
+  /* La barra lateral gruesa o borde izquierdo */
+  border-left: 4px solid var(--color) !important;
+}
+
+/* Título del Callout */
+.callout-title {
+  color: var(--color) !important;
+  font-weight: 700;
+  font-family: 'EB Garamond', serif; /* O la fuente que elegiste */
+  font-size: 1.1em;
+}
+
+/* Icono del Callout */
+.callout-icon {
+  color: var(--color) !important;
+}
+
+/* --- COLORES ESPECÍFICOS POR TIPO --- */
+/* Sobrescribimos los colores por defecto de Quartz para igualar tu Obsidian */
+
+/* Nota / Info (Azul) */
+.callout[data-callout="note"], .callout[data-callout="info"], .callout[data-callout="todo"] {
+  --color: #1A7DA4; /* Tu Teal/Azul personalizado */
+  --bg: #ebf6fa;    /* Fondo azul muy suave */
+}
+
+/* Éxito / Done (Verde) */
+.callout[data-callout="success"], .callout[data-callout="check"], .callout[data-callout="done"] {
+  --color: #56949f; /* Pine (Verde azulado) */
+  --bg: #effdfa;
+}
+
+/* Precaución / Warning (Naranja/Amarillo) */
+.callout[data-callout="warning"], .callout[data-callout="caution"], .callout[data-callout="attention"] {
+  --color: #ea9d34; /* Gold */
+  --bg: #fff9e6;
+}
+
+/* Pregunta / Ayuda (Cyan/Teal suave) */
+.callout[data-callout="question"], .callout[data-callout="help"], .callout[data-callout="faq"] {
+  --color: #286983; /* Foam/Teal oscuro */
+  --bg: #eaf6fa;
+}
+
+/* Peligro / Error (Rojo) */
+.callout[data-callout="danger"], .callout[data-callout="error"], .callout[data-callout="missing"] {
+  --color: #b4637a; /* Love (Rojo rosado) */
+  --bg: #ffeef2;
+}
+
+/* Citas / Abstract (Morado/Gris) */
+.callout[data-callout="quote"], .callout[data-callout="abstract"], .callout[data-callout="example"] {
+  --color: #907aa9; /* Iris (Morado) */
+  --bg: #f5f0fa;
 }
