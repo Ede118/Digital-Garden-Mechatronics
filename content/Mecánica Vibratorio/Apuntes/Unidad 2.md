@@ -16,6 +16,7 @@ $$
 Esta última expresión es la previamente mencionada "Ecuación de Equilibrio **Dinámico**". Cabe aclarar que este principio también aplica para las ecuaciones de **pares de fuerzas**.
 
 ###### Ejemplo
+
 ![[Unidad 2 Img 1.png]]
 
 Analizando todas las fuerzas del sistema en estado **estático**: 
@@ -24,7 +25,8 @@ $$
 	P_1 &= - kx_1 = -k(a\theta_0) \\
 	P_2 &= - kx_2 = -k(b\theta_0) \\
 	W &= mg
-\end{aligned} $$
+\end{aligned}
+$$
 En el equilibrio, tomando como positivo el sentido anti horario: 
 $$
 \circlearrowleft^{+} \sum M_0 = +aP_1-cW+bP_2 = 0 
@@ -87,7 +89,6 @@ $$
 $$
 Ahora, podemos "deshacernos" de los desplazamientos virtuales, y ordenando la ecuación llegamos a: 
 $$
-
 \frac{ml^2}{3} \ddot{\theta} + c l^2 \; \dot{\theta} + k \frac{l^2}{4}\theta = \frac{l^2}{2} p_0 f(t) \; 
 $$
 Y finalmente, llegamos a la ecuación que describe el sistema.
@@ -105,7 +106,7 @@ Un ejemplo sería el siguiente sistema:
 Si se buscase plantear este sistema utilizando coordenadas $x_{1}$, $x_{2}$, $y_{1}$, $y_{2}$ sería necesario introducir dos ecuaciones de restricciones geométricas:
 $$
 \begin{align}
-x_{1}^{2}+x_{2}^{2}-L_{1}^{2} & =0 \\
+x_{1}^{2}+x_{2}^{2}-L_{1}^{2} & =0 \\ 
 (x_{2}-x_{1})^{2}+(y_{2}-y_{1})^{2}-L_{2}^{2} & = 0
 \end{align}
 $$
