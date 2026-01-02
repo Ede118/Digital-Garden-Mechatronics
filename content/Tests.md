@@ -58,7 +58,6 @@ $$
 \end{flalign*}
 $$
 
-
 ---
 
 # Tipos de Notas
