@@ -21,9 +21,9 @@ Esta última expresión es la previamente mencionada "Ecuación de Equilibrio **
 Analizando todas las fuerzas del sistema en estado **estático**: 
 $$
 \begin{aligned}
-P_1 &= - kx_1 = -k(a\theta_0) \\
-P_2 &= - kx_2 = -k(b\theta_0) \\
-W &= mg
+	P_1 &= - kx_1 = -k(a\theta_0) \\
+	P_2 &= - kx_2 = -k(b\theta_0) \\
+	W &= mg
 \end{aligned} $$
 En el equilibrio, tomando como positivo el sentido anti horario: 
 $$
@@ -61,25 +61,25 @@ Definimos como *Trabajo Virtual* al trabajo realizado por todas las fuerzas del 
 Primero, buscamos todas las fuerzas del sistema, en orden: Fuerza Inercial, Fuerza Elástica, Fuerza Disipativa y Fuerza Externa: 
 $$
 \begin{aligned}
-M_{inercial} &= -\frac{ml^2}{3} \ddot{\theta} \\
-F_{elástica} &= -k \frac{l}{2}\theta \\
-F_{disipativa} &= - cl\dot{\theta} \\
-F_{externa} &= p_0 f(t)
+M_{\text{inercial}} &= -\frac{ml^2}{3} \ddot{\theta} \\
+F_{\text{elástica}} &= -k \frac{l}{2}\theta \\
+F_{\text{disipativa}} &= - cl\dot{\theta} \\
+F_{\text{externa}} &= p_0 f(t)
 \end{aligned}
 $$
 Sabiendo que estamos trabajando con una coordenada generalizada de tipo angular, y aplicando los trabajos virtuales en un desplazamiento virtual $\delta x$ y **sumando los trabajos provocados por los MOMENTOS** sería:
 
 $$\begin{aligned}
-\delta W_{inercial} &= -(\frac{ml^2}{3} \ddot{\theta}) \; \delta \theta \\
-\delta W_{elástica} &= - (k \frac{l}{2}\theta) \frac{l}{2} \; \delta \theta \\
-\delta W_{disipativa} &= - (cl\dot{\theta}) \; l \; \delta \theta \\
-\delta W_{externa} &= \int_0^l{(p_0 f(t) dx) \; x \; \delta \theta} = \frac{l^2}{2} p_0 f(t) \; \delta \theta
+\delta W_{\text{inercial}} &= -(\frac{ml^2}{3} \ddot{\theta}) \; \delta \theta \\
+\delta W_{\text{elástica}} &= - (k \frac{l}{2}\theta) \frac{l}{2} \; \delta \theta \\
+\delta W_{\text{disipativa}} &= - (cl\dot{\theta}) \; l \; \delta \theta \\
+\delta W_{\text{externa}} &= \int_0^l{(p_0 f(t) dx) \; x \; \delta \theta} = \frac{l^2}{2} p_0 f(t) \; \delta \theta
 \end{aligned}
 $$
 
 La suma de todos estos trabajos debería ser cero: 
 $$ 
-W_{virtual} = W_{inercial} + W_{elástica} + W_{disipativa} + W_{externa} = 0
+W_{\text{virtual}} = W_{\text{inercial}} + W_{\text{elástica}} + W_{\text{disipativa}} + W_{\text{externa}} = 0
 $$
 Reemplazando, podemos llegar a: 
 $$
@@ -133,19 +133,23 @@ Utilizando las expresiones anteriores, encontramos un sistema de coordenadas gen
 
 Vemos que la función Energía Cinética del sistema, Energía Potencial del sistema y Trabajo de Fuerzas No Conservativas son funciones tal que:
 
-$$\begin{aligned}
+$$
+\begin{aligned}
 T &= T(q_1, q_2,...,q_n,\dot{q_1},\dot{q_2},...,\dot{q_n}, t) \\ \\
 V &= V(q_1, q_2,...,q_n) \\ \\
 \delta W &= Q_1 \delta q_1 + Q_2 \delta q_2 + ... + Q_n \delta q_n
-\end{aligned}$$
+\end{aligned}
+$$
 Debido al principio de Hamilton, debemos ver los diferenciales de cada una de estas ecuaciones:
-$$\begin{aligned}
+$$
+\begin{aligned}
 \delta T &= \frac{\partial T}{\partial q_1} \delta q_1+\frac{\partial T}{\partial q_2} \delta q_2+...+\frac{\partial T}{\partial q_n} \delta q_n +\frac{\partial T}{\partial \dot{q_1}} \delta \dot{q_1}+\frac{\partial T}{\partial \dot{q_2}} \delta \dot{q_2}+...+\frac{\partial T}{\partial \dot{q_n}} \delta \dot{q_n}  \\
 \\
 \delta V &= \frac{\partial V}{\partial q_1} \delta q_1+\frac{\partial V}{\partial q_2} \delta q_2 + ... + \frac{\partial V}{\partial q_n} \delta q_n \\
 \\
 \delta W &= Q_1 \delta q_1 + Q_2 \delta q_2 + ... + Q_n \delta q_n
-\end{aligned}$$
+\end{aligned}
+$$
 
 Aquellos términos con $\delta \dot{q}$ vuelven la expresión más difícil para trabajar, por lo que tratamos de buscar una expresión equivalente. Recordando que se esta trabajando en un intervalo de tiempo $[t_{1}, t_{2}]$, podemos realizar integración por partes para encontrar una expresión más útil:
 
