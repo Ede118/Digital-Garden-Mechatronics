@@ -2,36 +2,52 @@
 
 // put your custom CSS here!
 
-/* Tipografía de Títulos (h1-weight: 900) */
-/* Un toque estético para títulos gruesos */
+/* --- REPLICA DE ANUPPUCCIN PARA QUARTZ --- */
+
+/* H1: Rosa/Rojo y Extra Grueso (Weight 900) */
 h1 {
+  color: #d7827e; /* Rosé */
   font-weight: 900 !important;
-  letter-spacing: -0.03em; 
+  letter-spacing: -0.05rem;
 }
 
-/* h2/h3 weight */
-h2, h3 {
-  font-weight: 700 !important; 
+/* H2: Peach/Naranja y Muy Fino (Weight 100) */
+h2 {
+  color: #DD7F67; /* Tu custom Peach del JSON */
+  font-weight: 100 !important; /* Estilo fino característico */
+  margin-top: 2rem;
 }
 
-/* Bordes Redondos (Card Radius: 8px / Border Radius: 16px) */
-/* Esto afectará a las cajas de búsqueda, graph view, etc */
-.graph, .explorer, .toc, pre, code {
-  border-radius: 8px !important;
+/* H3: Teal y Negrita */
+h3 {
+  color: #1A7DA4; /* Tu custom Teal del JSON */
+  font-weight: 700 !important;
 }
 
-/* Sombras suaves (anp-card-shadows) */
-.graph, .explorer, .toc {
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  background-color: var(--lightgray); /* Para dar efecto de "tarjeta" */
-  border: 1px solid var(--lightgray);
-}
-
-/* Etiquetas (Tags) redondeadas (tag-radius: 2 -> en web queda mejor un poco más) */
-a.internal.tag-link {
-  border-radius: 4px;
-  background-color: var(--highlight);
-  color: var(--secondary);
-  padding: 0.2em 0.4em;
+/* H4: Azul */
+h4 {
+  color: #56949f; /* Pine / Foam */
   font-weight: 600;
+}
+
+/* H5: Morado/Iris */
+h5 {
+  color: #907aa9; /* Iris */
+}
+
+/* H6: Grisáceo */
+h6 {
+  color: #797593;
+}
+
+/* Ajuste de Bordes Redondeados (Card Look) */
+.graph, .explorer, .toc, pre, code, .callout {
+  border-radius: 8px !important;
+  background-color: var(--lightgray);
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+/* Ajuste de Fuente Serif para títulos */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Merriweather', serif;
 }
