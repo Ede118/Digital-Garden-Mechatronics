@@ -4,6 +4,15 @@
 
 /* --- REPLICA DE ANUPPUCCIN PARA QUARTZ --- */
 
+:root {
+  --bodyFont: "EB Garamond", serif;
+}
+
+body {
+  font-family: var(--bodyFont);
+  font-size: 1.1rem;;
+}
+
 /* H1: Rosa/Rojo y Extra Grueso (Weight 900) */
 h1 {
   color: #d7827e; /* Rosé */
