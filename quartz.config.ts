@@ -29,25 +29,25 @@ const config: QuartzConfig = {
       },
       colors: {
         lightMode: {
-          light: "#faf8f8",
-          lightgray: "#e5e5e5",
-          gray: "#b8b8b8",
-          darkgray: "#4e4e4e",
-          dark: "#2b2b2b",
-          secondary: "#284b63",
-          tertiary: "#84a59d",
-          highlight: "rgba(143, 159, 169, 0.15)",
-          textHighlight: "#fff23688",
+          light: "#faf4ed",      // Fondo Rosé Pine Dawn
+          lightgray: "#fffaf3",  // Fondo secundario
+          gray: "#9893a5",       // Elementos inactivos
+          darkgray: "#575279",   // Texto normal
+          dark: "#286983",       // Títulos (Pine)
+          secondary: "#1A7DA4",  // TU PERSONALIZACIÓN (ctp-custom-teal@@light)
+          tertiary: "#EE653A",   // TU PERSONALIZACIÓN (ctp-custom-subtext1@@light)
+          highlight: "rgba(26, 125, 164, 0.15)", // Tu color secundario con transparencia
+          textHighlight: "#b3aa0288", // Amarillo pálido con transparencia
         },
         darkMode: {
-          light: "#161618",
-          lightgray: "#393639",
-          gray: "#646464",
-          darkgray: "#d4d4d4",
-          dark: "#ebebec",
-          secondary: "#7b97aa",
-          tertiary: "#84a59d",
-          highlight: "rgba(143, 159, 169, 0.15)",
+          light: "#303446",      // Fondo Catppuccin Frappé
+          lightgray: "#292c3c",  // Fondo secundario
+          gray: "#626880",       // Elementos inactivos
+          darkgray: "#c6d0f5",   // Texto normal
+          dark: "#8caaee",       // Títulos (Blue)
+          secondary: "#11B7C5",  // TU PERSONALIZACIÓN (ctp-custom-teal@@dark)
+          tertiary: "#FB35D8",   // TU PERSONALIZACIÓN (ctp-custom-subtext0@@dark)
+          highlight: "rgba(17, 183, 197, 0.15)", // Tu color secundario con transparencia
           textHighlight: "#b3aa0288",
         },
       },
