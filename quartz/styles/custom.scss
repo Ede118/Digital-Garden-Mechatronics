@@ -8,27 +8,50 @@
   --bodyFont: "EB Garamond", serif;
 }
 
-/* Romper la jaula: Header de ancho completo */
+/* custom.scss */
+
+/* 1. Definir el Layout Global: Header arriba (full), Contenido abajo */
+.page {
+  display: grid;
+  grid-template-areas: 
+      "header header header"
+      "left center right"
+      "footer footer footer" !important;
+  grid-template-rows: auto 1fr auto !important;
+  /* Definir anchos de columnas: Izquierda (0px si está vacía), Centro (flexible), Derecha (auto) */
+  grid-template-columns: 0px minmax(0, 1fr) auto !important; 
+  gap: 0 !important; /* Quitamos huecos raros */
+}
+
+/* 2. Forzar al Header a ocupar el ático completo */
 .page > header {
-  grid-area: header;
-  /* La clave: Decirle que ocupe desde la columna 1 hasta la final (-1) */
-  grid-column: 1 / -1 !important; 
-  width: 100%;
-  max-width: 100% !important;
-  
-  /* Estética de barra de navegación */
+  grid-area: header !important;
+  width: 100vw !important; /* Ancho de la ventana */
+  max-width: 100vw !important;
+  margin-left: calc(-50vw + 50%); /* Centrado forzoso */
+  padding: 1rem 3rem; /* Relleno cómodo */
+  box-sizing: border-box;
   background-color: var(--light);
   border-bottom: 1px solid var(--lightgray);
-  padding: 1rem 2rem; /* Aire a los costados */
-  box-sizing: border-box;
   
-  /* Alinear contenido interno */
+  /* Flexbox para alinear Logo - Nav - Search */
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 2rem;
 }
 
+/* 3. Ajustar el contenido central */
+.center {
+  max-width: 850px !important; /* Ancho de lectura óptimo */
+  margin: 2rem auto !important; /* Centrado */
+  padding: 0 2rem;
+}
 
+/* 4. Asegurar que la izquierda desaparezca de verdad */
+.left {
+  display: none !important;
+}
 
 
 
