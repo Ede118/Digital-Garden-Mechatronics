@@ -15,39 +15,39 @@ $$
 $$
 Esta última expresión es la previamente mencionada "Ecuación de Equilibrio **Dinámico**". Cabe aclarar que este principio también aplica para las ecuaciones de **pares de fuerzas**.
 
-###### Ejemplo
-
-![[Unidad 2 Img 1.png]]
-
-Analizando todas las fuerzas del sistema en estado **estático**: 
-$$
-\begin{aligned}
-P_1 &= - kx_1 = -k(a\theta_0) \\
-P_2 &= - kx_2 = -k(b\theta_0) \\
-W &= mg
-\end{aligned}
-$$
-En el equilibrio, tomando como positivo el sentido anti horario: 
-$$
-\circlearrowleft^{+} \sum M_0 = +aP_1-cW+bP_2 = 0 
-$$
-Si aplicamos una rotación $\theta$ al sistema, obtendríamos la nueva ecuación: 
-$$
-\circlearrowleft^{+} \sum M_0 = +(P_1 + ka\theta)a - cW+(P_2 + kb\theta)b=J \ddot{\theta}
-$$
-Podemos despejar:
-$$
-\circlearrowleft^{+} \sum M_0 = [+P_1a - cW + P_2 b] + [-ka^2\theta - kb^2\theta] =J \ddot{\theta}
-$$
-Donde el primer corchete es nulo, debido a la ecuación de equilibrio estático, donde finalmente llegamos a la ecuación:
-$$
-\sum M_0 = -k(a^2+b^2)\theta = J \ddot{\theta}
-$$
-Despejando usando D'alambert, llegamos a:
-$$
-\ddot{\theta}+\frac{k(a^2+b^2)}{J}\cdot\theta = 0
-$$
-
+> [!EXAMPLE]
+> 
+> ![[Unidad 2 Img 1.png]]
+> 
+> Analizando todas las fuerzas del sistema en estado **estático**: 
+> $$
+> \begin{aligned}
+> P_1 &= - kx_1 = -k(a\theta_0) \\
+> P_2 &= - kx_2 = -k(b\theta_0) \\
+> W &= mg
+> \end{aligned}
+> $$
+> En el equilibrio, tomando como positivo el sentido anti horario: 
+> $$
+> \circlearrowleft^{+} \sum M_0 = +aP_1-cW+bP_2 = 0 
+> $$
+> Si aplicamos una rotación $\theta$ al sistema, obtendríamos la nueva ecuación: 
+> $$
+> \circlearrowleft^{+} \sum M_0 = +(P_1 + ka\theta)a - cW+(P_2 + kb\theta)b=J \ddot{\theta}
+> $$
+> Podemos despejar:
+> $$
+> \circlearrowleft^{+} \sum M_0 = [+P_1a - cW + P_2 b] + [-ka^2\theta - kb^2\theta] =J \ddot{\theta}
+> $$
+> Donde el primer corchete es nulo, debido a la ecuación de equilibrio estático, donde finalmente llegamos a la ecuación:
+> $$
+> \sum M_0 = -k(a^2+b^2)\theta = J \ddot{\theta}
+> $$
+> Despejando usando D'alambert, llegamos a:
+> $$
+> \ddot{\theta}+\frac{k(a^2+b^2)}{J}\cdot\theta = 0
+> $$
+> 
 
 ## 2. Principio de los Desplazamientos (Trabajos) Virtuales
 
@@ -302,6 +302,7 @@ Recordando que:
 >$$
 > \begin{align} \left( M+m \right) \ddot{x} + \frac{ml}{2} \Big(\cos(\theta) \ddot{\theta} - \sin(\theta) \dot{\theta}^{2} \Big) + \big( c_{1}+c_{2} \big) \dot{x} + \big( k_{1}+k_{2}\big)  & = F(t) \\ \frac{ml^{2}}{3} \ddot{\theta} + \frac{ml}{2} \Big( \cos(\theta) \ddot{x} - \sin(\theta) \dot{\theta} \dot{x} \Big) + \frac{ml}{2} \dot{\theta} \dot{x} \sin (\theta) + \frac{mgl}{2} \sin (\theta)  & = M(t) \end{align}
 >$$
+
 
 > [!TIP]  __Cálculos auxiliares__
 > $$ T = \tfrac12 (M+m)\dot q_1^{\,2} + \frac{mℓ^{2}}{6}\dot q₂ ^{2} + \tfrac12 \big(mℓcos q₂\big)\dot q₁ \dot q₂ $$
