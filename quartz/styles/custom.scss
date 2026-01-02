@@ -60,7 +60,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .callout {
   /* 1. La caja contenedora (Bordes y Fondo del Cuerpo) */
-  background-color: color-mix(in srgb, var(--color) 8%, var(--light)) !important; /* Cuerpo ligeramente oscuro/teñido */
+  /* background-color: transparent !important; */
+  background-color: color-mix(in srgb, var(--color) 1%, var(--light)) !important; /* Cuerpo ligeramente oscuro/teñido */
   border: 1px solid var(--color) !important; /* Borde exterior fino del color del tipo */
   border-radius: 8px !important;
   padding: 0 !important; /* Quitamos padding global para manejar título y cuerpo por separado */
